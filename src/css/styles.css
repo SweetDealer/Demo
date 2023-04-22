@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,200;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,700&display=swap");
 
-
 /* @import url(https://fonts.googleapis.com/css?family=Rubik:300,300italic,400,400italic,500,500italic); */
 
 *,
@@ -91,7 +90,6 @@ h3 {
 	list-style: none;
 	padding: 0;
 }
-
 
 .list-of-three {
 	display: flex;
@@ -220,10 +218,31 @@ video,
 .header-elsci__navigation {
 	display: flex;
 	justify-content: space-between;
-	font-size: 1rem;
+}
+.header-elsci__link{
+	position: relative;
+	padding: 0 1rem;
 }
 .header-elsci__link:not(:last-child) {
 	margin-right: 1.25rem;
+}
+.header-elsci__link a {
+	color: inherit;
+}
+.header-elsci__link:hover {
+	color: var(--main-color1);
+}
+.header-elsci__link.active {
+	color: var(--main-color1);
+}
+.header-elsci__link.active::after{
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background: var(--main-color1);
 }
 @media (max-width: 768px) {
 	.header-elsci__menu-burger {
@@ -239,7 +258,7 @@ video,
 		content: "";
 		position: absolute;
 		width: 100%;
-		background: #2082d8;
+		background: var(--main-color1);
 		height: 0.125rem;
 		left: 0;
 		box-sizing: content-box;
@@ -270,7 +289,7 @@ video,
 		top: -100%;
 		left: 0;
 		width: 100%;
-		background: #2082d8;
+		background: var(--main-color1);
 		flex-direction: column;
 		justify-content: center;
 		padding: 0.5rem;
@@ -284,6 +303,9 @@ video,
 	}
 	.header-elsci__link a {
 		color: #fff;
+	}
+	.header-elsci__link:hover{
+		font-weight: 400;
 	}
 }
 
@@ -313,7 +335,6 @@ video,
 	max-width: 990px;
 	justify-content: center;
 	margin: 0 auto;
-	
 }
 .products-item {
 	padding: 1rem;
@@ -326,12 +347,11 @@ video,
 	flex-direction: column;
 	height: 100%;
 	transition: all 200ms ease-in-out;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .product-card:hover {
 	cursor: pointer;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
-
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
 }
 
 .product-card__header--tag {
@@ -401,11 +421,10 @@ video,
 	}
 }
 
-
 /*         BUSSINESS-MODEL       */
 
-.business-model__list li{
-margin: 0.5rem;
+.business-model__list li {
+	margin: 0.5rem;
 }
 .business-model {
 	max-width: 990px;
