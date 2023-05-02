@@ -9,25 +9,19 @@ document.querySelector(".header__burger").addEventListener("click", () => {
 });
 
 window.addEventListener('scroll', (el) => {
-    document.querySelector('.header-elsci').classList.toggle('scroll', document.scrollingElement.scrollTop != 0)
+    document.querySelector('.header-elsci').classList.toggle('scroll', document.scrollingElement.scrollTop != 0);
+    if (document.querySelector('.header-peaksel')) {
+        document.querySelector('.header-peaksel').classList.toggle('scroll', document.scrollingElement.scrollTop != 0)
+    }
 })
 
-// const pageName = document.querySelector('main').dataset.page;
-// document.querySelector(`.navigation-list__item[data-page="${pageName}"]`).classList.add("active");
-
-function crossWord(id) {
-    document.querySelector(`.word-box[data-id="${id}"] .wrong`).classList.add('strike');
+const pageName = document.querySelector('main').dataset.page;
+console.log(pageName);
+if (pageName) {
+    document.querySelector(`.navigation-list__item[data-page="${pageName}"]`).classList.add('active');
 }
 
-function showWord(id) {
-    document.querySelector(`.word-box[data-id="${id}"] .correct`).classList.add('visible');
-}
-
-for (let id = 1; id <= 7; id++) {
-    setTimeout(() => {
-        crossWord(id)
-    }, id * 2000)
-    setTimeout(() => {
-        showWord(id)
-    }, ((id * 2000) + 2000))
-}
+const siteName = document.querySelector('main').dataset.context;
+if (siteName) {
+    document.querySelector('.header-elsci').classList.add('sub-header')
+} 

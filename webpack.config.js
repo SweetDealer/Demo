@@ -9,10 +9,19 @@ let fs = require('fs');
 
 let files = fs.readdirSync(__dirname + '/src');
 let htmlPlugins = files.filter(file => file.endsWith('.html')).map(file => {
-    console.log(file);
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/' + file,
-        filename: file
+        filename: file,
+        title: 'blah-blah'
+    });
+});
+
+let peakselFiles = fs.readdirSync(__dirname + '/src/peaksel/html');
+let htmlPluginsForPeaksel = peakselFiles.filter(file => file.endsWith('.html')).map(file => {
+    return new HtmlWebpackPlugin({
+        template: __dirname + '/src/peaksel/html/' + file,
+        filename: '/peaksel/' + file,
+        title: 'blah-blah'
     });
 });
 
@@ -25,6 +34,7 @@ module.exports = {
     },
     plugins: [
         ...htmlPlugins,
+        ...htmlPluginsForPeaksel,
         // new HtmlWebpackPlugin({
         //     template: __dirname + '/src/peaksel/docs.html',
         //     filename: '/peaksel/docs.html'
@@ -34,10 +44,8 @@ module.exports = {
                 { from: 'src/css', to: 'css' },
                 { from: 'src/js', to: 'js' },
                 { from: 'src/img', to: 'img' },
-                // { from: 'src/peaksel/article', to: 'peaksel/article' },
-                // { from: 'src/peaksel/doc', to: 'peaksel/doc' },
-                // { from: 'src/peaksel/js', to: 'peaksel/js' },
-                // { from: 'src/peaksel/img', to: 'peaksel/img' },
+                { from: 'src/peaksel/img', to: 'peaksel/img' },
+                { from: 'src/peaksel/js', to: 'peaksel/js' },
             ]
         }),
     ],
