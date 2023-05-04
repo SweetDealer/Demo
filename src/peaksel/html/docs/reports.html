@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Reports</title>
+		<link rel="stylesheet" href="../../css/styles.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<%= require('html-loader!../../../partials/header.html').default %> <%=
+			require('html-loader!../../../partials/headerPeaksel.html').default %>
+			<main
+				class="reports page-body"
+				data-page="documentation"
+				data-context="peaksel">
+				<div class="container page-content">
+					<h1 class="page-title">Generate PDF and Excel reports</h1>
+					<section>
+						<div class="video-box">
+							<iframe
+								class="video-item"
+								src="https://www.youtube.com/embed/gIIR4IBfW8M"
+								frameborder="0"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+						</div>
+					</section>
+				</div>
+			</main>
+			<%= require('html-loader!../../../partials/footer.html').default %>
+		</div>
+		<script src="../../js/script.js"></script>
+	</body>
+</html>

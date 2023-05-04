@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Aligning detectors</title>
+		<link rel="stylesheet" href="../../css/styles.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<%= require('html-loader!../../../partials/header.html').default %> <%=
+			require('html-loader!../../../partials/headerPeaksel.html').default %>
+
+			<main class="align-detectors page-body"
+				data-page="documentation"
+				data-context="peaksel">
+				<div class="container">
+					<div class="page-content">
+						<h1 class="page-title">Using multiple detectors but they got misaligned?</h1>
+						<p>Drag chromatograms by X axis to align them</p>
+						<video
+							autoplay
+							loop
+							muted
+							playsinline
+							src="../img/landing-align.mp4"></video>
+					</div>
+				</div>
+			</main>
+			<%= require('html-loader!../../../partials/footer.html').default %>
+
+		</div>
+		<script src="../../js/script.js"></script>
+
+	</body>
+</html>

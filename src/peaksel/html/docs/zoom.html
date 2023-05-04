@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Zooming chromatograms and spectra</title>
+		<link rel="stylesheet" href="../../css/styles.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<%= require('html-loader!../../../partials/header.html').default %> <%=
+			require('html-loader!../../../partials/headerPeaksel.html').default %>
+
+			<main
+				class="zoom page-body"
+				data-page="documentation"
+				data-context="peaksel">
+				<div class="container">
+					<div class="page-content">
+						<h2 class="page-subtitle">Zoom in specific chromatogram by clicking on the legend</h2>
+						<div class="video-box">
+							<video class="video-item"
+								autoplay
+								loop
+								muted
+								playsinline
+								src="../img/landing-zoom.mp4"></video>
+						</div>
+						<h2 class="page-subtitle">Hold "z" to zoom in on spectrum</h2>
+						<div class="video-box">
+							<video class="video-item"
+								autoplay
+								loop
+								muted
+								playsinline
+								src="../img/landing-scan-zoom.mp4"></video>
+						</div>
+					</div>
+				</div>
+			</main>
+			<%= require('html-loader!../../../partials/footer.html').default %>
+
+		</div>
+		<script src="../../js/script.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Batches</title>
+		<link rel="stylesheet" href="../../css/styles.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<%= require('html-loader!../../../partials/header.html').default %> <%=
+			require('html-loader!../../../partials/headerPeaksel.html').default %>
+			<main
+				class="batch-navigation page-body"
+				data-page="documentation"
+				data-context="peaksel">
+				<div class="container page-content">
+					<h2 class="page-subtitle">
+						Wondering if you missed 1 sample out of hundred? QC them quickly and
+						find the outliers
+					</h2>
+					<div class="video-box">
+						<video class="video-item"
+							autoplay
+							loop
+							muted
+							playsinline
+							src="../img/landing-qc.mp4"></video>
+					</div>
+					<h2 class="page-subtitle">
+						Still want to go through all the chromatograms? Use W, A, S, D keys
+						to quickly navigate between them
+					</h2>
+					<div class="video-box">
+						<video
+						class="video-item"
+							autoplay
+							loop
+							muted
+							playsinline
+							src="../img/landing-navigation.mp4"></video>
+					</div>
+				</div>
+			</main>
+			<%= require('html-loader!../../../partials/footer.html').default %>
+		</div>
+		<script src="../../js/script.js"></script>
+	</body>
+</html>
