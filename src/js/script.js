@@ -23,8 +23,5 @@ if (pageName) {
 
 const siteName = document.querySelector('main').dataset.context;
 if (siteName) {
-    document.querySelector('.header-elsci').classList.add('sub-header'),
-        document.querySelector('.header-elsci-logo--main img').removeAttribute("src"),
-        document.querySelector('.header-elsci-logo--main img').setAttribute["src", "../6c5a0122aa9f5b00d777.png"],
-        console.log(document.querySelector('.header-elsci-logo--main img'));
+    document.querySelector('.header-elsci').classList.add('sub-header')
 } 
